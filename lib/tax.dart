@@ -28,95 +28,184 @@ class TaxModel {
         federalTaxRate = 0.32;
       }
     }
+    else {
+      if (income <= 20000) {
+        federalTaxRate = 0.05;
+      }
+      if (income > 20000 && income <= 80000) {
+        federalTaxRate = 0.06;
+      }
+      if (income > 80000 && income <= 171000) {
+        federalTaxRate = 0.11;
+      }
+      if (income > 171000 && income <= 326000) {
+        federalTaxRate = 0.12;
+      }
+      if (income > 326000 && income <= 414000) {
+        federalTaxRate = 0.16;
+      }
+    }
 
-    // Tax Rates Acquired from https://taxfoundation.org/data/all/state/2023-sales-tax-rates-midyear/
+    // Tax Rates Acquired from https://www.nerdwallet.com/article/taxes/state-income-tax-rates
     switch(state) {
-      case 'Minnesota':
-        stateTaxRate = 0.06875;
-        break;
-      
-      case 'Wisconsin': case 'North Dakota':
+      case 'Alabama':
         stateTaxRate = 0.05;
         break;
       
-      case 'Iowa': case 'Kentucky': case 'Maryland': case 'Michigan': case 'Vermont': case 'West Virginia': case 'Florida': case 'Pennsylvania': case 'Idaho': case 'South Carolina':
-        stateTaxRate = 0.06;
-        break;
-
-      case 'South Dakota':
-        stateTaxRate = 0.042;
+      case 'Arizona':
+        stateTaxRate = 0.05;
         break;
       
-      case 'Colorado':
-        stateTaxRate = 0.029;
-        break;
-
-      case 'Hawaii': case 'Wyoming': case 'New York':  case 'Georgia': case 'Alabama':
-        stateTaxRate = 0.04;
-        break;
-
-      case 'Missouri':
-        stateTaxRate = 0.0423;
-        break;
-
-      case 'Louisiana':
-        stateTaxRate = 0.0445;
-        break;
-
-      case 'Oklahoma':
-        stateTaxRate = 0.045;
-        break;
-
-      case 'North Carolina':
-        stateTaxRate = 0.475;
-        break;
-
-      case 'New Mexico':
-        stateTaxRate = 0.488;
-        break;
-
-      case 'Virginia':
-        stateTaxRate = 0.053;
-        break;
-
-      case 'Maine': case 'Nebraska':
-        stateTaxRate = 0.055;
-        break;
-
-      case 'Arizona':
-        stateTaxRate = 0.056;
-        break;
-
-      case 'Ohio':
-        stateTaxRate = 0.0575;
-        break;
-
-      case 'Utah':
-        stateTaxRate = 0.061;
-        break;
-
-      case 'Massachusetts': case 'Texas':  case 'Illinois':
-        stateTaxRate = 0.0625;
-        break;
-
-      case 'Connecticut':
-        stateTaxRate = 0.0635;
-        break;
-
-      case 'Washington': case 'Kansas': case 'Arkansas':
-        stateTaxRate = 0.065;
-        break;
-
-      case 'New Jersey':
-        stateTaxRate = 0.0663;
-        break;
-
-      case 'Indiana': case 'Rhode Island': case 'Mississippi': case 'Tennessee':
-        stateTaxRate = 0.07;
+      case 'Arkansas':
+        stateTaxRate = 0.047;
         break;
 
       case 'California':
-        stateTaxRate = 0.0725;
+        stateTaxRate = 0.012;
+        break;
+      
+      case 'Colorado':
+        stateTaxRate = 0.044;
+        break;
+
+      case 'Connecticut':
+        stateTaxRate = 0.0699;
+        break;
+
+      case 'Delaware':
+        stateTaxRate = 0.0445;
+        break;
+
+      case 'Georgia':
+        stateTaxRate = 0.0575;
+        break;
+
+      case 'Hawaii':
+        stateTaxRate = 0.011;
+        break;
+
+      case 'Illinois':
+        stateTaxRate = 0.0495;
+        break;
+
+      case 'Idaho':
+        stateTaxRate = 0.058;
+        break;
+
+      case 'Indiana':
+        stateTaxRate = 0.0315;
+        break;
+
+      case 'Iowa':
+        stateTaxRate = 0.06;
+        break;
+
+      case 'Kansas':
+        stateTaxRate = 0.057;
+        break;
+
+      case 'Louisiana':
+        stateTaxRate = 0.0425;
+        break;
+
+      case 'Maine':
+        stateTaxRate = 0.0715;
+        break;
+
+      case 'Maryland':
+        stateTaxRate = 0.0575;
+        break;
+
+      case 'Massachusetts':
+        stateTaxRate = 0.09;
+        break;
+
+      case 'Michigan':
+        stateTaxRate = 0.0405;
+        break;
+
+      case 'Minnesota':
+        stateTaxRate = 0.0985;
+        break;
+
+      case 'Mississippi':
+        stateTaxRate = 0.05;
+        break;
+
+      case 'Missouri':
+        stateTaxRate = 0.0495;
+        break;
+      
+      case 'Montana':
+        stateTaxRate = 0.0675;
+        break;
+
+      case 'Nebraska':
+        stateTaxRate = 0.0064;
+        break;
+
+      case 'New Hampshire':
+        stateTaxRate = 0.04;
+        break;
+
+      case 'New Jersey':
+        stateTaxRate = 0.1075;
+        break;
+
+      case 'New Mexico':
+        stateTaxRate = 0.059;
+        break;
+
+      case 'New York':
+        stateTaxRate = 0.109;
+        break;
+
+      case 'North Carolina':
+        stateTaxRate = 0.0475;
+        break;
+
+      case 'Ohio':
+        stateTaxRate = 0.0399;
+        break;
+
+      case 'Oklahoma':
+        stateTaxRate = 0.0475;
+        break;
+
+      case 'Oregan':
+        stateTaxRate = 0.099;
+        break;
+
+      case 'Pennsylvania':
+        stateTaxRate = 0.0307;
+        break;
+
+      case 'Rhode Island':
+        stateTaxRate = 0.0599;
+        break;
+
+      case 'South Carolina':
+        stateTaxRate = 0.064;
+        break;
+
+      case 'Utah':
+        stateTaxRate = 0.0465;
+        break;
+
+      case 'Vermont':
+        stateTaxRate = 0.0875;
+        break;
+
+      case 'Virginia':
+        stateTaxRate = 0.0575;
+        break;
+
+      case 'West Virginia':
+        stateTaxRate = 0.0512;
+        break;
+
+      case 'Wisconsin':
+        stateTaxRate = 0.0765;
         break;
 
       default:
